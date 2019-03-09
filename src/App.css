@@ -1,33 +1,124 @@
-.App {
-  text-align: center;
+*{
+    padding:0; margin:0;
+}
+a{
+    cursor: default;
+}
+html,
+body,
+.app {
+    background: url(http://www.script-tutorials.com/demos/360/images/stars.png) top center #000;
+    /*padding: 1em;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/*header*/
+.logo{
+    display: flex;
+    color: #FFEE58;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.header{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+}
+.header div:last-child{
+    display: flex;
+    color: #fff;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*pagination*/
+.pagination{
+    color: #FFEE58;
+    display: flex;
+    font-size: 22px;
+}
+.pagination p:last-child{
+    padding-left: 5px;
+
+}
+.pagination a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFEE58;
+    padding-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/*card*/
+.card{
+    color: #FFEE58;
+    position: relative;
+    width: 376px;
+    padding: 20px;
+}
+.card span{
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.card img{
+    cursor: pointer;
+}
+.category_text {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 1em;
+    background-color: rgba(0,0,0,.4);
+    width: 376px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Footer*/
+.footer{
+    color: #FFEE58;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+.footer a{
+    cursor: pointer;
+    color: #FFEE58;
+    text-decoration: none;
+}
+.dev_name{
+    padding-left: 10px;
+}
+.github{
+    width: 28px;
+    height: 18px;
+}
+
+/*404*/
+.pageNotFound{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.pageNotFound a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 80px;
+}
+.pageNotFound a p{
+    color: #FFEE58;
+    cursor: pointer;
+}
+.pageNotFound p{
+    text-align: center;
+    font-size: 120px;
+    color: #ffffff;
 }
