@@ -12,9 +12,29 @@ class People extends React.Component {
         people: []
     };
 
-    async componentDidMount() {
-        const {count, results: people} = await peopleApi.getAll();
+    componentDidMount() {
+        this.updatePageFromUrl();
+    }
 
+    componentDidUpdate() {
+        this.updatePageFromUrl();
+    }
+
+    updatePageFromUrl(){
+        const { location } = this.props;
+        const urlParams = new URLSearchParams(location.search);
+        const page = +urlParams.get('page') || 1;
+        
+        if (page === this.state.page) {
+            return
+        }else{
+            this.setState({page}, this.loadPeople)
+        }
+    }
+
+    loadPeople = async () =>{
+        const {page} = this.state;
+        const {count, results: people} = await peopleApi.getAll({page});
 
         this.setState({
             people,

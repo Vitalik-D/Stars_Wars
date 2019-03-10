@@ -18,7 +18,7 @@ const ApiPagination = ({ location, count, page = 1, perPage = 10 }) => {
 
     return urlParams.toString()
   };
-  console.log(location);
+
 
   return (
     <div className="apiPagination">
