@@ -1,14 +1,13 @@
 import React from "react";
 
-import { getFilms } from "../api/Api";
+
+import People from "./people/People";
 
 class Films extends React.Component {
-    componentDidMount() {
-        getFilms()
-    }
+
 
     render() {
-        return <div >fghfgh</div>;
+        return <People />;
     }
 }
 
