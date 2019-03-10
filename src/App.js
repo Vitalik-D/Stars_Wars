@@ -7,12 +7,12 @@ import Header from "./component/header/Header";
 import Card from "./component/card/Card";
 import Footer from "./component/footer/Footer";
 
-import character from './img/character.jpg'
-import films from './img/films.jpg'
-import planets from './img/planets.jpg'
-import species from './img/species.jpg'
-import starships from './img/starships.jpg'
-import vehicles from './img/vehicles.jpg'
+import character from './img/home/character.jpg'
+import films from './img/home/films.jpg'
+import planets from './img/home/planets.jpg'
+import species from './img/home/species.jpg'
+import starships from './img/home/starships.jpg'
+import vehicles from './img/home/vehicles.jpg'
 
 class App extends React.Component {
   render() {
@@ -39,10 +39,6 @@ class App extends React.Component {
             <Link to="/planets">
               <Card name="Planets" src={planets} />
             </Link>
-
-            <div className="container-fluid">
-
-            </div>
           </div>
         </div>
         <Footer />

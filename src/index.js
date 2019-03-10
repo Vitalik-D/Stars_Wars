@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 const Root = () => (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <Switch>
             <Route exact path="/" component={App} />
             <Route path="/films" component={Films} />

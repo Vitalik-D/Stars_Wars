@@ -24,10 +24,8 @@ body,
     text-transform: uppercase;
 }
 .header{
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*flex-direction: column;*/
+    padding-top: 1em;
+
 }
 .header div:last-child{
     display: flex;
@@ -40,6 +38,8 @@ body,
 
 /*pagination*/
 .pagination{
+    padding-top: 1em;
+    padding-left: 1em;
     color: #FFEE58;
     display: flex;
     font-size: 22px;
@@ -121,4 +121,14 @@ body,
     text-align: center;
     font-size: 120px;
     color: #ffffff;
+}
+
+/*people*/
+.people{
+
+    width: 100vw;
+}
+
+p,li{
+    color: #FFEE58;
 }

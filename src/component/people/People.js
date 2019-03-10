@@ -1,22 +1,43 @@
-import React from "react";
+import React from 'react';
 
-import { getPeople } from "../../api/Api";
+import * as peopleApi from "../../api/peopleApi";
 import Header from "../header/Header";
 import Pagination from "../pagination/Pagination";
 import Footer from "../footer/Footer";
 
 class People extends React.Component {
-    componentDidMount() {
-        getPeople()
+    state = {
+        isLoaded: false,
+        people: []
+    };
+
+    async componentDidMount() {
+        const people = await peopleApi.getAll();
+
+
+        this.setState({
+            people,
+            isLoaded: true
+        })
     }
 
     render() {
+        const {people, isLoaded} = this.state;
         return (
-            <>
-                <Header category="Character"/>
-                <Pagination page="Character"/>
-                <Footer/>
-            </>
+            <div>
+                { isLoaded ? (
+                    <ul>
+                        {people.map(person => (
+                                <li>{person.name}</li>
+                            ))}
+                    </ul>
+                )
+                : (
+                    <p>Loading..</p>
+                )}
+
+            </div>
+
         );
     }
 }
