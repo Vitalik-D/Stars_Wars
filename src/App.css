@@ -129,6 +129,12 @@ body,
     width: 100vw;
 }
 
-p,li{
+p,li {
     color: #FFEE58;
+    font-size: 25px;
+}
+.apiPagination a{
+    text-decoration: none;
+    color: #FFEE58;
+    cursor: pointer;
 }
