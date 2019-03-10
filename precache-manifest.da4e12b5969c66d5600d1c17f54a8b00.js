@@ -1,31 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "03a9a1af55b8e6a4a0da13335e344cfa",
-    "url": "/Stars_Wars/static/media/films.03a9a1af.jpg"
+    "revision": "d28c9986cefbc3d4fc40b574ce17fcc6",
+    "url": "/Stars_Wars/static/media/planets.d28c9986.jpg"
   },
   {
-    "revision": "a6deddb11bc861fa7482",
-    "url": "/Stars_Wars/static/css/main.7074fcca.chunk.css"
+    "revision": "3cc905061f501b769efd",
+    "url": "/Stars_Wars/static/css/main.62452b93.chunk.css"
   },
   {
     "revision": "e79e7e17f7824d267b17",
     "url": "/Stars_Wars/static/js/runtime~main.e3c523a6.js"
   },
   {
-    "revision": "a5002946b8cb74c45004",
-    "url": "/Stars_Wars/static/js/2.47ca282c.chunk.js"
+    "revision": "af65cb2e72447caca28e",
+    "url": "/Stars_Wars/static/js/2.1a2e6fdb.chunk.js"
   },
   {
     "revision": "33022f18c26cdb9bed57635e02b8ad8e",
     "url": "/Stars_Wars/static/media/character.33022f18.jpg"
   },
   {
-    "revision": "a6deddb11bc861fa7482",
-    "url": "/Stars_Wars/static/js/main.9814b98c.chunk.js"
+    "revision": "03a9a1af55b8e6a4a0da13335e344cfa",
+    "url": "/Stars_Wars/static/media/films.03a9a1af.jpg"
   },
   {
-    "revision": "d28c9986cefbc3d4fc40b574ce17fcc6",
-    "url": "/Stars_Wars/static/media/planets.d28c9986.jpg"
+    "revision": "3cc905061f501b769efd",
+    "url": "/Stars_Wars/static/js/main.637db748.chunk.js"
   },
   {
     "revision": "469d9d378f037804edf25fe460b71601",
@@ -40,7 +40,11 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/vehicles.788b92b8.jpg"
   },
   {
-    "revision": "2e5a58ba94642342e25ffa19e9202da7",
+    "revision": "c5857f7d16a6c064bf27143efa18c87b",
+    "url": "/Stars_Wars/static/media/q.c5857f7d.jpg"
+  },
+  {
+    "revision": "4ee2273b7996e77f7fde536e2fccee2a",
     "url": "/Stars_Wars/index.html"
   }
 ];
