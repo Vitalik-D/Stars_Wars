@@ -38,7 +38,6 @@ body,
 
 /*pagination*/
 .pagination{
-    padding-top: 1em;
     padding-left: 1em;
     color: #FFEE58;
     display: flex;
@@ -123,14 +122,18 @@ body,
     color: #ffffff;
 }
 
-/*people*/
+/*datalist*/
 
-.peopleList {
+.dataList {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
     justify-content: space-between;
 }
+
+/*people*/
+
+
 
 .people{
     width: 220px;
@@ -140,11 +143,24 @@ body,
     color: #000000;
     background: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
+}
+.people p:nth-child(2){
+    padding-top: 15px;
+}
+.people p:last-child{
+    padding-bottom: 15px;
 }
 .people img{
 
     width: 220px;
+}
+
+/*nav*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 /*pagination*/
 .apiPagination a{
@@ -172,4 +188,25 @@ body,
     align-items: center;
     color: #FFEE58;
     font-size: 150px;
+}
+
+/*films*/
+.films{
+    color: #FFEE58;
+}
+/*species*/
+.species{
+    color: #FFEE58;
+}
+/*starships*/
+.starships{
+    color: #FFEE58;
+}
+/*planets*/
+.planets{
+    color: #FFEE58;
+}
+/*Vehicles*/
+.vehicles{
+    color: #FFEE58;
 }

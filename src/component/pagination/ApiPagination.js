@@ -1,30 +1,29 @@
 import React from "react";
 
 import { Link, withRouter } from "react-router-dom";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const ApiPagination = ({ location, count, page = 1, perPage = 10 }) => {
   const pagesCount = Math.ceil(count / perPage);
   const pages = [];
 
-  for (let i = 0; i < pagesCount; i++){
-    pages.push(i + 1)
+  for (let i = 0; i < pagesCount; i++) {
+    pages.push(i + 1);
   }
 
-  const getSearchWithPage = (page) => {
+  const getSearchWithPage = page => {
     const urlParams = new URLSearchParams(location.search);
 
-    urlParams.set('page', page);
+    urlParams.set("page", page);
 
-    return urlParams.toString()
+    return urlParams.toString();
   };
-
 
   return (
     <div className="apiPagination">
       {pages.map(page => (
         <Link
-            key={page}
+          key={page}
           to={{
             pathname: location.pathname,
             search: getSearchWithPage(page)
@@ -39,6 +38,7 @@ const ApiPagination = ({ location, count, page = 1, perPage = 10 }) => {
 ApiPagination.propTypes = {
   count: PropTypes.number.isRequired,
   page: PropTypes.number,
-  perPage: PropTypes.number,
-}
+  perPage: PropTypes.number
+};
+
 export default withRouter(ApiPagination);

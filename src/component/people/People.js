@@ -1,17 +1,20 @@
 import React from "react";
 
-import * as peopleApi from "../../api/peopleApi";
+import * as dataApi from "../../api/Api";
 import ApiPagination from "../pagination/ApiPagination";
-
 import Loading from "../loading/Loading";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
-import q from "../../img/people/q.jpg"
+
+import Pagination from "../pagination/Pagination";
 
 
 class People extends React.Component {
   state = {
+    pathName: 'people',
     isLoaded: false,
-    page: 1,
+    page: 0,
     count: 0,
     people: []
   };
@@ -32,13 +35,14 @@ class People extends React.Component {
     if (page === this.state.page) {
       return;
     } else {
-      this.setState({ page }, this.loadPeople);
+      this.setState({ page }, this.loadData);
     }
   }
 
-  loadPeople = async () => {
+  loadData = async () => {
+    const {pathName} = this.state;
     const { page } = this.state;
-    const { count, results: people } = await peopleApi.getAll({ page });
+    const { count, results: people } = await dataApi.getAll({ pathName , page });
 
     this.setState({
       people,
@@ -53,16 +57,24 @@ class People extends React.Component {
       <>
         {isLoaded ? (
           <>
-            <ApiPagination count={count} page={page} />
-            <div className="peopleList">
-            {people.map(person => (
-              <div key={person.name} className="people">
-                  <img src={q} alt="{person.name}"/>
-                  <p>{person.name}</p>
-              </div>
-            ))}
+            <Header category="Character"/>
+            <div className='nav'>
+              <Pagination page="Character"/>
+              <ApiPagination count={count} page={page} />
             </div>
-
+            <div className="dataList">
+              {people.map(person => (
+                <div key={person.name} className="people">
+                  <img src='' alt={person.name} />
+                  <p>Name: {person.name}</p>
+                  <p>Birth Year: {person.birth_year}</p>
+                  <p>Gender: {person.gender}</p>
+                  <p>Height: {person.height}</p>
+                  <p>Weight: {person.mass}</p>
+                </div>
+              ))}
+            </div>
+            <Footer/>
           </>
         ) : (
           <>

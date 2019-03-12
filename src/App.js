@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 
-
 import Header from "./component/header/Header";
-import Card from "./component/card/Card";
+import CardCategory from "./component/card/CardCategory";
 import Footer from "./component/footer/Footer";
 
 import character from './img/home/character.jpg'
@@ -22,22 +21,22 @@ class App extends React.Component {
         <div>
           <div className="app">
             <Link to="/people">
-              <Card name="Character" src={character} />
+              <CardCategory name="Character" src={character} />
             </Link>
             <Link to="/films">
-              <Card name="Film" src={films} />
+              <CardCategory name="Film" src={films} />
             </Link>
             <Link to="/species">
-              <Card name="Species" src={species} />
+              <CardCategory name="Species" src={species} />
             </Link>
             <Link to="/starships">
-              <Card name="Starships" src={starships} />
+              <CardCategory name="Starships" src={starships} />
             </Link>
             <Link to="/vehicles">
-              <Card name="Vehicles" src={vehicles} />
+              <CardCategory name="Vehicles" src={vehicles} />
             </Link>
             <Link to="/planets">
-              <Card name="Planets" src={planets} />
+              <CardCategory name="Planets" src={planets} />
             </Link>
           </div>
         </div>
