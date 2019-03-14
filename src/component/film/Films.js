@@ -7,7 +7,7 @@ import * as dataApi from "../../api/Api";
 import Loading from "../loading/Loading";
 import Pagination from "../pagination/Pagination";
 
-import images from "../../img/films/imgFilms"
+
 class Films extends React.Component {
   state = {
     pathName: "films",
@@ -40,9 +40,7 @@ class Films extends React.Component {
   };
 
   render() {
-    console.log(images.map(img =>(
-        img[1]
-    )));
+
     const { films, isLoaded } = this.state;
     return (
       <>
@@ -57,9 +55,7 @@ class Films extends React.Component {
               {films.map(film => (
                 <div key={film.title} className="films">
 
-                  <img src={images.map(img =>(
-                      img[1]
-                  ))} alt={film.title}/>
+                  <img src={`./img/films/${film.url.match(/\d+/)}.jpg`} alt={film.title}/>
                   <p>Name: {film.title}</p>
                   <p>Name: {film.episode_id}</p>
                   <p>Name: {film.director}</p>

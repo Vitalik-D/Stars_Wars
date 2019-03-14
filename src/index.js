@@ -11,8 +11,6 @@ import Vehicles from "./component/Vehicles/Vehicles";
 import Starships from "./component/starship/Starships";
 import PageNotFound from "./component/pageNotFound/PageNotFound";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import images from "./img/films/imgFilms"
-
 
 const Root = () => (
     <Router basename={process.env.PUBLIC_URL}>

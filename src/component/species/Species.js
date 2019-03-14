@@ -64,7 +64,7 @@ class Species extends React.Component {
                         <div className="dataList">
                             {species.map(specie => (
                                 <div key={specie.name} className="species">
-                                    <img src="" alt={specie.name}/>
+                                    <img src={`./img/species/${specie.url.match(/\d+/)}.jpg`} alt={specie.name}/>
                                     <p>Name: {specie.name}</p>
                                     <p>Classification: {specie.classification}</p>
                                     <p>Average height: {specie.average_height}</p>

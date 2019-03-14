@@ -64,7 +64,7 @@ class Starship extends React.Component {
                         <div className="dataList">
                             {starships.map(starship => (
                                 <div key={starship.name} className="starships">
-                                    <img src="" alt={starship.name} />
+                                    <img src={`./img/starships/${starship.url.match(/\d+/)}.jpg`} alt={starship.name} />
                                     <p>Name: {starship.name}</p>
                                     <p>Model: {starship.model}</p>
                                     <p>Manufacturer: {starship.manufacturer}</p>

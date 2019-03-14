@@ -65,7 +65,7 @@ class Planets extends React.Component {
                         <div className="dataList">
                             {planets.map(planet => (
                                 <div key={planet.name} className="planets">
-                                    <img src="" alt={planet.name}/>
+                                    <img src={`./img/planets/${planet.url.match(/\d+/)}.jpg`} alt={planet.name}/>
                                     <p>Name: {planet.name}</p>
                                     <p>Diameter: {planet.diameter}</p>
                                     <p>Climate: {planet.climate}</p>

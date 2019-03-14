@@ -65,7 +65,7 @@ class Vehicles extends React.Component {
                 <div className="dataList">
                   {vehicles.map(vehicles => (
                       <div key={vehicles.name} className="starships">
-                        <img src="" alt={vehicles.name} />
+                        <img src={`./img/vehicles/${vehicles.url.match(/\d+/)}.jpg`} alt={vehicles.name} />
                         <p>Name: {vehicles.name}</p>
                         <p>Model: {vehicles.model}</p>
                         <p>Manufacturer: {vehicles.manufacturer}</p>

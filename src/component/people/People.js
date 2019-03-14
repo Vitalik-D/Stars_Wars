@@ -65,7 +65,7 @@ class People extends React.Component {
             <div className="dataList">
               {people.map(person => (
                 <div key={person.name} className="people">
-                  <img src='' alt={person.name} />
+                  <img src={`./img/people/${person.url.match(/\d+/)}.jpg`} alt={person.name} />
                   <p>Name: {person.name}</p>
                   <p>Birth Year: {person.birth_year}</p>
                   <p>Gender: {person.gender}</p>

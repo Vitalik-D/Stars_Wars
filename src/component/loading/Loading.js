@@ -8,7 +8,9 @@ class Loading extends React.Component {
       <>
         <Header />
         <div className="loading">
-          <p>Loading...</p>
+
+
+
         </div>
         <Footer />
       </>
