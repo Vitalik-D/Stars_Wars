@@ -103,6 +103,7 @@ body,
     text-decoration: none;
 }
 .dev_name{
+    font-size: 16px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -145,31 +146,7 @@ body,
     justify-content: space-between;
 }
 
-/*people*/
 
-
-
-.people{
-    width: 220px;
-    padding-bottom: 50px;
-}
-.people p{
-    color: #000000;
-    background: #fff;
-    text-align: center;
-    padding: 5px;
-    font-family: Biko;
-}
-.people p:nth-child(2){
-    padding-top: 15px;
-}
-.people p:last-child{
-    padding-bottom: 15px;
-}
-.people img{
-
-    width: 220px;
-}
 
 /*nav*/
 .nav{
@@ -206,24 +183,160 @@ body,
     font-size: 150px;
     font-family: Biko;
 }
-
+/*people*/
+.people{
+    width: 220px;
+    padding-bottom: 50px;
+}
+.people p{
+    color: #000000;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: Biko;
+}
+.people p:nth-child(2){
+    padding-top: 15px;
+}
+.people p:last-child{
+    padding-bottom: 15px;
+}
+.people img{
+    width: 220px;
+    margin-bottom: -5px;
+}
 /*films*/
 .films{
-    color: #FFEE58;
+    width: 280px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.films p{
+    color: #000000;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: Biko;
+}
+.films p:nth-child(2){
+    padding-top: 15px;
+}
+.films p:last-child{
+    padding-bottom: 15px;
+}
+.films img{
+    width: 280px;
+    margin-bottom: -5px;
 }
 /*species*/
 .species{
-    color: #FFEE58;
+    width: 220px;
+    padding-bottom: 50px;
+}
+.species p{
+    color: #000000;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: Biko;
+}
+.species p:nth-child(2){
+    padding-top: 15px;
+}
+.species p:last-child{
+    padding-bottom: 15px;
+}
+.species img{
+    width: 220px;
+    margin-bottom: -5px;
 }
 /*starships*/
 .starships{
-    color: #FFEE58;
+    width: 220px;
+    padding-bottom: 50px;
+}
+.starships p{
+    color: #000000;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: Biko;
+}
+.starships p:nth-child(2){
+    padding-top: 15px;
+}
+.starships p:last-child{
+    padding-bottom: 15px;
+}
+.starships img{
+    width: 220px;
+    margin-bottom: -5px;
 }
 /*planets*/
 .planets{
-    color: #FFEE58;
+    width: 220px;
+    padding-bottom: 50px;
+}
+.planets p{
+    color: #000000;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: Biko;
+}
+.planets p:nth-child(2){
+    padding-top: 15px;
+}
+.planets p:last-child{
+    padding-bottom: 15px;
+}
+.planets img{
+    width: 220px;
+    margin-bottom: -5px;
 }
 /*Vehicles*/
 .vehicles{
-    color: #FFEE58;
+    width: 220px;
+    padding-bottom: 50px;
+}
+.vehicles p{
+    color: #000000;
+    background: #fff;
+    text-align: center;
+    padding: 5px;
+    font-family: Biko;
+}
+.vehicles p:nth-child(2){
+    padding-top: 15px;
+}
+.vehicles p:last-child{
+    padding-bottom: 15px;
+}
+.vehicles img{
+    width: 220px;
+    margin-bottom: -5px;
+}
+
+
+
+@media (max-width: 550px) {
+    .pagination{
+        font-size: 16px;
+    }
+    .apiPagination a{
+        font-size: 16px;
+    }
+    .dev_name {
+        font-size: 14px;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .header div:last-child{
+        font-size: 20px;
+    }
+    .dataList{
+        justify-content: center;
+        align-items: center;
+    }
 }

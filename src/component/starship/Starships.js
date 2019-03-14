@@ -70,8 +70,6 @@ class Starship extends React.Component {
                                     <p>Manufacturer: {starship.manufacturer}</p>
                                     <p>Length: {starship.length}</p>
                                     <p>Crew: {starship.crew}</p>
-                                    <p>Starship class: {starship.starship_clas}</p>
-
                                 </div>
                             ))}
                         </div>
