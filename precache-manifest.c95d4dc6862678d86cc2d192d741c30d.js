@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "03a9a1af55b8e6a4a0da13335e344cfa",
-    "url": "/Stars_Wars/static/media/films.03a9a1af.jpg"
+    "revision": "33022f18c26cdb9bed57635e02b8ad8e",
+    "url": "/Stars_Wars/static/media/character.33022f18.jpg"
   },
   {
-    "revision": "33536529450a2daf7998",
-    "url": "/Stars_Wars/static/css/main.3c88b6fc.chunk.css"
+    "revision": "d7378a8791485f1a314b",
+    "url": "/Stars_Wars/static/css/main.ded62cf9.chunk.css"
   },
   {
     "revision": "e79e7e17f7824d267b17",
@@ -16,12 +16,20 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/js/2.b806e5a3.chunk.js"
   },
   {
-    "revision": "33022f18c26cdb9bed57635e02b8ad8e",
-    "url": "/Stars_Wars/static/media/character.33022f18.jpg"
+    "revision": "7cf2733910d4c9ccc09fcfc79d2cbc96",
+    "url": "/Stars_Wars/static/media/Biko_Regular.7cf27339.otf"
   },
   {
-    "revision": "33536529450a2daf7998",
-    "url": "/Stars_Wars/static/js/main.34ac3480.chunk.js"
+    "revision": "cc3019aa6439ef893839b8a0d6d0391d",
+    "url": "/Stars_Wars/static/media/Starjedi.cc3019aa.ttf"
+  },
+  {
+    "revision": "d7378a8791485f1a314b",
+    "url": "/Stars_Wars/static/js/main.ce0d4aa4.chunk.js"
+  },
+  {
+    "revision": "03a9a1af55b8e6a4a0da13335e344cfa",
+    "url": "/Stars_Wars/static/media/films.03a9a1af.jpg"
   },
   {
     "revision": "d28c9986cefbc3d4fc40b574ce17fcc6",
@@ -40,7 +48,7 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/vehicles.788b92b8.jpg"
   },
   {
-    "revision": "fa9061ee9ad503d9ed390e08b72d76c3",
+    "revision": "914d744fdc4a675d86e069fff6e70c7e",
     "url": "/Stars_Wars/index.html"
   }
 ];
