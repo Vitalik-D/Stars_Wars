@@ -1,1 +1,1 @@
-# [https://vitalik-d.github.io/Stars_Wars/] (https://vitalik-d.github.io/Stars_Wars/)
+# [Preview] (https://vitalik-d.github.io/Stars_Wars/)
