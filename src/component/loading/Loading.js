@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import sword from "../../img/Lazer Sword.png"
 
 class Loading extends React.Component {
   render() {
@@ -8,11 +9,9 @@ class Loading extends React.Component {
       <>
         <Header />
         <div className="loading">
-
-
-
+            <img src={sword} className="logo-load-spin" alt="Lazer-Sword"/>
         </div>
-        <Footer />
+
       </>
     );
   }

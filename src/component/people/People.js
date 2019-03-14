@@ -5,14 +5,13 @@ import ApiPagination from "../pagination/ApiPagination";
 import Loading from "../loading/Loading";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-
+import { Link } from "react-router-dom";
 
 import Pagination from "../pagination/Pagination";
 
-
 class People extends React.Component {
   state = {
-    pathName: 'people',
+    pathName: "people",
     isLoaded: false,
     page: 0,
     count: 0,
@@ -40,9 +39,9 @@ class People extends React.Component {
   }
 
   loadData = async () => {
-    const {pathName} = this.state;
+    const { pathName } = this.state;
     const { page } = this.state;
-    const { count, results: people } = await dataApi.getAll({ pathName , page });
+    const { count, results: people } = await dataApi.getAll({ pathName, page });
 
     this.setState({
       people,
@@ -57,15 +56,20 @@ class People extends React.Component {
       <>
         {isLoaded ? (
           <>
-            <Header category="Character"/>
-            <div className='nav'>
-              <Pagination page="Character"/>
+            <Header category="Character" />
+            <div className="nav">
+              <Pagination page="Character" />
               <ApiPagination count={count} page={page} />
             </div>
             <div className="dataList">
               {people.map(person => (
                 <div key={person.name} className="people">
-                  <img src={`./img/people/${person.url.match(/\d+/)}.jpg`} alt={person.name} />
+                  <Link to={`/people/${person.url.match(/\d+/)}`}>
+                    <img
+                      src={`./img/people/${person.url.match(/\d+/)}.jpg`}
+                      alt={person.name}
+                    />
+                  </Link>
                   <p>Name: {person.name}</p>
                   <p>Birth Year: {person.birth_year}</p>
                   <p>Gender: {person.gender}</p>
@@ -74,7 +78,7 @@ class People extends React.Component {
                 </div>
               ))}
             </div>
-            <Footer/>
+            <Footer />
           </>
         ) : (
           <>

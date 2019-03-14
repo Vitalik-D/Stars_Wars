@@ -6,6 +6,7 @@ import * as dataApi from "../../api/Api";
 
 import Loading from "../loading/Loading";
 import Pagination from "../pagination/Pagination";
+import { Link } from "react-router-dom";
 
 
 class Films extends React.Component {
@@ -54,10 +55,11 @@ class Films extends React.Component {
             <div className="dataList">
               {films.map(film => (
                 <div key={film.title} className="films">
-
-                  <img src={`./img/films/${film.url.match(/\d+/)}.jpg`} alt={film.title}/>
+                  <Link to={`/films/${film.episode_id}`}>
+                  <img src={`./img/films/${film.episode_id}.jpg`} alt={film.title}/>
+                  </Link>
                   <p>Name: {film.title}</p>
-                  <p>Name: {film.episode_id}</p>
+                  <p>Episode: {film.episode_id}</p>
                   <p>Name: {film.director}</p>
                   <p>Name: {film.release_date}</p>
                 </div>

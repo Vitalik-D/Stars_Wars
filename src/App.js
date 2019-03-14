@@ -24,7 +24,7 @@ class App extends React.Component {
               <CardCategory name="Character" src={character} />
             </Link>
             <Link to="/films">
-              <CardCategory name="Film" src={films} />
+              <CardCategory name="Films" src={films} />
             </Link>
             <Link to="/species">
               <CardCategory name="Species" src={species} />

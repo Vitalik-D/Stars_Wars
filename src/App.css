@@ -12,8 +12,6 @@ a{
     font-family: Starjedi;
     src: url('./fonts/Starjedi.ttf');
 }
-
-
 html,
 body,
 .app {
@@ -22,7 +20,6 @@ body,
     flex-wrap: wrap;
     justify-content: center;
 }
-
 /*header*/
 .logo{
     display: flex;
@@ -33,7 +30,6 @@ body,
     text-transform: uppercase;
     font-family: Starjedi;
 }
-
 .header div:last-child{
     display: flex;
     color: #fff;
@@ -42,8 +38,8 @@ body,
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    padding-bottom: 50px;
 }
-
 /*pagination*/
 .pagination{
     padding-left: 1em;
@@ -51,6 +47,7 @@ body,
     display: flex;
     font-size: 22px;
     font-family: Biko;
+    padding-bottom: 20px;
 }
 .pagination p:last-child{
     padding-left: 5px;
@@ -62,7 +59,6 @@ body,
     color: #FFEE58;
     padding-right: 5px;
 }
-
 /*card*/
 .card{
     color: #FFEE58;
@@ -88,7 +84,6 @@ body,
     background-color: rgba(0,0,0,.4);
     width: 376px;
 }
-
 /*Footer*/
 .footer{
     color: #FFEE58;
@@ -111,7 +106,6 @@ body,
     width: 28px;
     height: 18px;
 }
-
 /*404*/
 .pageNotFound{
     display: flex;
@@ -136,18 +130,13 @@ body,
     color: #ffffff;
     font-family: Biko;
 }
-
 /*datalist*/
-
 .dataList {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
     justify-content: space-between;
 }
-
-
-
 /*nav*/
 .nav{
     display: flex;
@@ -171,17 +160,20 @@ body,
     justify-content: flex-end;
     padding: 1em;
 }
-
 /*loading*/
-.loading{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFEE58;
-    font-size: 150px;
-    font-family: Biko;
+.loading img{
+    animation: logo-load-spin infinite 20s linear;
+    pointer-events: none;
+    height: 400px;
+    max-width: 400px;
+}
+@keyframes logo-load-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 /*people*/
 .people{
@@ -209,7 +201,6 @@ body,
 .films{
     width: 280px;
     padding-bottom: 25px;
-    padding-top: 25px;
 }
 .films p{
     color: #000000;
@@ -316,8 +307,36 @@ body,
     width: 220px;
     margin-bottom: -5px;
 }
+/*onePAGE*/
+.onePage {
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 50px;
+    font-family: Biko;
+}
+.onePage_text{
+    color: #000;
+    background: #fff;
+    padding-left: 25px;
+    max-width: 600px;
+    font-family: Biko;
+    max-height: 350px;
+}
+.onePage_text p {
+    padding-top: 18px;
+    padding-right: 40px;
+    font-weight: 700;
+}
+.onePage_text p span {
 
+    font-weight: 100;
+}
+.onePage_logo img{
+    max-height: 350px;
 
+}
 
 @media (max-width: 550px) {
     .pagination{

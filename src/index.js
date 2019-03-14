@@ -11,17 +11,28 @@ import Vehicles from "./component/Vehicles/Vehicles";
 import Starships from "./component/starship/Starships";
 import PageNotFound from "./component/pageNotFound/PageNotFound";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import OneFilms from "./component/film/OneFilm";
+import OnePeople from "./component/people/OnePeople";
+import OneSpecies from "./component/species/OneSpecies";
+import OneVehicles from "./component/Vehicles/OneVehicles";
+import OneStarships from "./component/starship/OneStarships";
 
 const Root = () => (
     <Router basename={process.env.PUBLIC_URL}>
         <Switch>
             <Route exact path="/" component={App} />
-            <Route path="/films" component={Films} />
-            <Route path="/planets" component={Planets} />
-            <Route path="/people" component={People} />
-            <Route path="/species" component={Species} />
-            <Route path="/vehicles" component={Vehicles} />
-            <Route path="/starships" component={Starships} />
+            <Route exact path="/films" component={Films} />
+            <Route path="/films/" component={OneFilms} />
+            <Route exact path="/planets" component={Planets} />
+            <Route path="/planets/" component={OneFilms} />
+            <Route exact path="/people" component={People} />
+            <Route path="/people/" component={OnePeople} />
+            <Route exact path="/species" component={Species} />
+            <Route path="/species/" component={OneSpecies} />
+            <Route exact path="/vehicles" component={Vehicles} />
+            <Route path="/vehicles/" component={OneVehicles} />
+            <Route exact path="/starships" component={Starships} />
+            <Route path="/starships" component={OneStarships} />
             <Route render={PageNotFound} />
         </Switch>
     </Router>
