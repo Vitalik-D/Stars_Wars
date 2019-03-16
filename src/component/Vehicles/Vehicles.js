@@ -5,6 +5,7 @@ import Loading from "../loading/Loading";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Pagination from "../pagination/Pagination";
+import {Link} from "react-router-dom";
 
 
 
@@ -65,7 +66,9 @@ class Vehicles extends React.Component {
                 <div className="dataList">
                   {vehicles.map(vehicles => (
                       <div key={vehicles.name} className="starships">
-                        <img src={`./img/vehicles/${vehicles.url.match(/\d+/)}.jpg`} alt={vehicles.name} />
+                        <Link to={`/vehicles/${vehicles.url.match(/\d+/)}`}>
+                          <img src={`./img/vehicles/${vehicles.url.match(/\d+/)}.jpg`} alt={vehicles.name} />
+                        </Link>
                         <p>Name: {vehicles.name}</p>
                         <p>Model: {vehicles.model}</p>
                         <p>Manufacturer: {vehicles.manufacturer}</p>

@@ -7,6 +7,7 @@ import Footer from "../footer/Footer";
 
 import Pagination from "../pagination/Pagination";
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 
@@ -65,7 +66,9 @@ class Planets extends React.Component {
                         <div className="dataList">
                             {planets.map(planet => (
                                 <div key={planet.name} className="planets">
-                                    <img src={`./img/planets/${planet.url.match(/\d+/)}.jpg`} alt={planet.name}/>
+                                    <Link to={`/planets/${planet.url.match(/\d+/)}`}>
+                                        <img src={`./img/planets/${planet.url.match(/\d+/)}.jpg`} alt={planet.name}/>
+                                    </Link>
                                     <p>Name: {planet.name}</p>
                                     <p>Diameter: {planet.diameter}</p>
                                     <p>Climate: {planet.climate}</p>

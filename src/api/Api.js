@@ -7,8 +7,9 @@ export const getAll = async ({pathName, page}) => {
     return get(`${pathName}?${urlParams.toString()}`)
 };
 
-export const getById = async () => {
+export const getById = async ({pathName}) => {
     const urlParams = window.location.pathname;
-    return getId(`${urlParams}`)
+    // const urlId = urlParams.replace(`/${pathName}/`,'');
+    return getId(`${urlParams}/`)
 };
 

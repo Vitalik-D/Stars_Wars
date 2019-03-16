@@ -7,6 +7,7 @@ import PaginationOnePage from "../pagination/PaginationOnePage";
 
 class OnePeople extends React.Component {
     state = {
+        pathName: "people",
         data: [],
         isLoaded: false
     };
@@ -16,7 +17,8 @@ class OnePeople extends React.Component {
     }
 
     loadPeople = async () => {
-        const data = await dataApi.getById();
+        const { pathName } = this.state;
+        const data = await dataApi.getById({ pathName });
         this.setState({
             data,
             isLoaded: true
@@ -32,29 +34,26 @@ class OnePeople extends React.Component {
                 {isLoaded ? (
                     <>
                         <Header />
-                        <PaginationOnePage page="Films" name={data.title} />
+                        <PaginationOnePage  name={data.name} />
                         <div className="onePage">
                             <div className="onePage_logo">
-                                <img src={`../img/films/${index}.jpg`} alt="{data.title}" />
+                                <img src={`../img/people/${index}.jpg`} alt={data.name} />
                             </div>
                             <div className="onePage_text">
                                 <p>
-                                    Name: <span>{data.title}</span>
+                                    Name: <span>{data.name}</span>
                                 </p>
                                 <p>
-                                    Episode: <span>{data.episode_id}</span>
+                                    Height: <span>{data.height}</span>
                                 </p>
                                 <p>
-                                    Opening crawl: <span>{data.opening_crawl}</span>
+                                    Mass: <span>{data.mass}</span>
                                 </p>
                                 <p>
-                                    Director: <span>{data.director}</span>
+                                    Birth Year: <span>{data.birth_year}</span>
                                 </p>
                                 <p>
-                                    Producer: <span>{data.producer}</span>
-                                </p>
-                                <p>
-                                    Release date: <span>{data.release_date}</span>
+                                    Gende: <span>{data.gende}</span>
                                 </p>
                             </div>
                         </div>

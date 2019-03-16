@@ -7,6 +7,7 @@ import PaginationOnePage from "../pagination/PaginationOnePage";
 
 class OneFilms extends React.Component {
   state = {
+    pathName: "films",
     data: [],
     isLoaded: false
   };
@@ -16,7 +17,8 @@ class OneFilms extends React.Component {
   }
 
   loadPeople = async () => {
-    const data = await dataApi.getById();
+    const { pathName } = this.state;
+    const data = await dataApi.getById({ pathName });
     this.setState({
       data,
       isLoaded: true
@@ -32,10 +34,10 @@ class OneFilms extends React.Component {
         {isLoaded ? (
           <>
             <Header />
-            <PaginationOnePage page="Films" name={data.title} />
+            <PaginationOnePage  name={data.title} />
             <div className="onePage">
               <div className="onePage_logo">
-                <img src={`../img/films/${index}.jpg`} alt="{data.title}" />
+                <img src={`../img/films/${index}.jpg`} alt={data.title} />
               </div>
               <div className="onePage_text">
                 <p>

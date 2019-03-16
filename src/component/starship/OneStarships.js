@@ -6,68 +6,79 @@ import Loading from "../loading/Loading";
 import PaginationOnePage from "../pagination/PaginationOnePage";
 
 class OneStarships extends React.Component {
-    state = {
-        data: [],
-        isLoaded: false
-    };
+  state = {
+    pathName: "starships",
+    data: [],
+    isLoaded: false
+  };
 
-    componentDidMount() {
-        this.loadPeople();
-    }
+  componentDidMount() {
+    this.loadPeople();
+  }
 
-    loadPeople = async () => {
-        const data = await dataApi.getById();
-        this.setState({
-            data,
-            isLoaded: true
-        });
-    };
+  loadPeople = async () => {
+    const { pathName } = this.state;
+    const data = await dataApi.getById({ pathName });
+    this.setState({
+      data,
+      isLoaded: true
+    });
+  };
 
-    render() {
-        const urlParams = window.location.pathname;
-        const index = urlParams.match(/\d+/);
-        const { data, isLoaded } = this.state;
-        return (
-            <>
-                {isLoaded ? (
-                    <>
-                        <Header />
-                        <PaginationOnePage page="Films" name={data.title} />
-                        <div className="onePage">
-                            <div className="onePage_logo">
-                                <img src={`../img/films/${index}.jpg`} alt="{data.title}" />
-                            </div>
-                            <div className="onePage_text">
-                                <p>
-                                    Name: <span>{data.title}</span>
-                                </p>
-                                <p>
-                                    Episode: <span>{data.episode_id}</span>
-                                </p>
-                                <p>
-                                    Opening crawl: <span>{data.opening_crawl}</span>
-                                </p>
-                                <p>
-                                    Director: <span>{data.director}</span>
-                                </p>
-                                <p>
-                                    Producer: <span>{data.producer}</span>
-                                </p>
-                                <p>
-                                    Release date: <span>{data.release_date}</span>
-                                </p>
-                            </div>
-                        </div>
-                        <Footer />
-                    </>
-                ) : (
-                    <>
-                        <Loading />
-                    </>
-                )}
-            </>
-        );
-    }
+  render() {
+    const urlParams = window.location.pathname;
+    const index = urlParams.match(/\d+/);
+    const { data, isLoaded } = this.state;
+    return (
+      <>
+        {isLoaded ? (
+          <>
+            <Header />
+            <PaginationOnePage name={data.name} />
+            <div className="onePage">
+              <div className="onePage_logo">
+                <img src={`../img/starships/${index}.jpg`} alt={data.name} />
+              </div>
+              <div className="onePage_text">
+                <p>
+                  Name: <span>{data.name}</span>
+                </p>
+                <p>
+                  Model: <span>{data.model}</span>
+                </p>
+                <p>
+                  Manufacturer: <span>{data.manufacturer}</span>
+                </p>
+                <p>
+                  Cost in credits: <span>{data.cost_in_credits}</span>
+                </p>
+                <p>
+                  Length: <span>{data.length}</span>
+                </p>
+                <p>
+                  Crew water: <span>{data.crew}</span>
+                </p>
+                <p>
+                  Passengers : <span>{data.passengers}</span>
+                </p>
+                <p>
+                  Cargo Capacity: <span>{data.cargo_capacity}</span>
+                </p>
+                <p>
+                  Consumables: <span>{data.consumables}</span>
+                </p>
+              </div>
+            </div>
+            <Footer />
+          </>
+        ) : (
+          <>
+            <Loading />
+          </>
+        )}
+      </>
+    );
+  }
 }
 
 export default OneStarships;

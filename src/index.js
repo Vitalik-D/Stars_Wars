@@ -16,15 +16,18 @@ import OnePeople from "./component/people/OnePeople";
 import OneSpecies from "./component/species/OneSpecies";
 import OneVehicles from "./component/Vehicles/OneVehicles";
 import OneStarships from "./component/starship/OneStarships";
+import OnePlanets from "./component/planets/OnePlanets";
+import { BrowserRouter } from 'react-router-dom';
 
 const Root = () => (
+
     <Router basename={process.env.PUBLIC_URL}>
         <Switch>
             <Route exact path="/" component={App} />
             <Route exact path="/films" component={Films} />
             <Route path="/films/" component={OneFilms} />
             <Route exact path="/planets" component={Planets} />
-            <Route path="/planets/" component={OneFilms} />
+            <Route path="/planets/" component={OnePlanets} />
             <Route exact path="/people" component={People} />
             <Route path="/people/" component={OnePeople} />
             <Route exact path="/species" component={Species} />
@@ -32,16 +35,16 @@ const Root = () => (
             <Route exact path="/vehicles" component={Vehicles} />
             <Route path="/vehicles/" component={OneVehicles} />
             <Route exact path="/starships" component={Starships} />
-            <Route path="/starships" component={OneStarships} />
+            <Route path="/starships/" component={OneStarships} />
             <Route render={PageNotFound} />
         </Switch>
     </Router>
 );
 
 ReactDOM.render(
-
-    <Root />,
-
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Root />
+    </BrowserRouter>,
     document.getElementById('root'
     ));
 

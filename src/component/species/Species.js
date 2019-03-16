@@ -5,6 +5,7 @@ import Loading from "../loading/Loading";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Pagination from "../pagination/Pagination";
+import {Link} from "react-router-dom";
 
 
 
@@ -64,7 +65,9 @@ class Species extends React.Component {
                         <div className="dataList">
                             {species.map(specie => (
                                 <div key={specie.name} className="species">
-                                    <img src={`./img/species/${specie.url.match(/\d+/)}.jpg`} alt={specie.name}/>
+                                    <Link to={`/species/${specie.url.match(/\d+/)}`}>
+                                        <img src={`./img/species/${specie.url.match(/\d+/)}.jpg`} alt={specie.name}/>
+                                    </Link>
                                     <p>Name: {specie.name}</p>
                                     <p>Classification: {specie.classification}</p>
                                     <p>Average height: {specie.average_height}</p>

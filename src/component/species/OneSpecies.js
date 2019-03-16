@@ -7,6 +7,7 @@ import PaginationOnePage from "../pagination/PaginationOnePage";
 
 class OneSpecies extends React.Component {
     state = {
+        pathName: "species",
         data: [],
         isLoaded: false
     };
@@ -16,7 +17,8 @@ class OneSpecies extends React.Component {
     }
 
     loadPeople = async () => {
-        const data = await dataApi.getById();
+        const { pathName } = this.state;
+        const data = await dataApi.getById({ pathName });
         this.setState({
             data,
             isLoaded: true
@@ -32,29 +34,26 @@ class OneSpecies extends React.Component {
                 {isLoaded ? (
                     <>
                         <Header />
-                        <PaginationOnePage page="Films" name={data.title} />
+                        <PaginationOnePage name={data.name} />
                         <div className="onePage">
                             <div className="onePage_logo">
-                                <img src={`../img/films/${index}.jpg`} alt="{data.title}" />
+                                <img src={`../img/species/${index}.jpg`} alt={data.name} />
                             </div>
                             <div className="onePage_text">
                                 <p>
-                                    Name: <span>{data.title}</span>
+                                    Name: <span>{data.name}</span>
                                 </p>
                                 <p>
-                                    Episode: <span>{data.episode_id}</span>
+                                    Classification: <span>{data.classification}</span>
                                 </p>
                                 <p>
-                                    Opening crawl: <span>{data.opening_crawl}</span>
+                                    Designation: <span>{data.designation}</span>
                                 </p>
                                 <p>
-                                    Director: <span>{data.director}</span>
+                                    Average height: <span>{data.average_height}</span>
                                 </p>
                                 <p>
-                                    Producer: <span>{data.producer}</span>
-                                </p>
-                                <p>
-                                    Release date: <span>{data.release_date}</span>
+                                    Language: <span>{data.language}</span>
                                 </p>
                             </div>
                         </div>

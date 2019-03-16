@@ -6,68 +6,76 @@ import Loading from "../loading/Loading";
 import PaginationOnePage from "../pagination/PaginationOnePage";
 
 class OnePlanets extends React.Component {
-    state = {
-        data: [],
-        isLoaded: false
-    };
+  state = {
+    pathName: "planets",
+    data: [],
+    isLoaded: false
+  };
 
-    componentDidMount() {
-        this.loadPeople();
-    }
+  componentDidMount() {
+    this.loadPeople();
+  }
 
-    loadPeople = async () => {
-        const data = await dataApi.getById();
-        this.setState({
-            data,
-            isLoaded: true
-        });
-    };
+  loadPeople = async () => {
+    const { pathName } = this.state;
+    const data = await dataApi.getById({ pathName });
+    this.setState({
+      data,
+      isLoaded: true
+    });
+  };
 
-    render() {
-        const urlParams = window.location.pathname;
-        const index = urlParams.match(/\d+/);
-        const { data, isLoaded } = this.state;
-        return (
-            <>
-                {isLoaded ? (
-                    <>
-                        <Header />
-                        <PaginationOnePage page="Films" name={data.title} />
-                        <div className="onePage">
-                            <div className="onePage_logo">
-                                <img src={`../img/films/${index}.jpg`} alt="{data.title}" />
-                            </div>
-                            <div className="onePage_text">
-                                <p>
-                                    Name: <span>{data.title}</span>
-                                </p>
-                                <p>
-                                    Episode: <span>{data.episode_id}</span>
-                                </p>
-                                <p>
-                                    Opening crawl: <span>{data.opening_crawl}</span>
-                                </p>
-                                <p>
-                                    Director: <span>{data.director}</span>
-                                </p>
-                                <p>
-                                    Producer: <span>{data.producer}</span>
-                                </p>
-                                <p>
-                                    Release date: <span>{data.release_date}</span>
-                                </p>
-                            </div>
-                        </div>
-                        <Footer />
-                    </>
-                ) : (
-                    <>
-                        <Loading />
-                    </>
-                )}
-            </>
-        );
-    }
+  render() {
+    const urlParams = window.location.pathname;
+    const index = urlParams.match(/\d+/);
+    const { data, isLoaded } = this.state;
+    return (
+      <>
+        {isLoaded ? (
+          <>
+            <Header />
+            <PaginationOnePage name={data.name} />
+            <div className="onePage">
+              <div className="onePage_logo">
+                <img src={`../img/planets/${index}.jpg`} alt={data.name} />
+              </div>
+              <div className="onePage_text">
+                <p>
+                  Name: <span>{data.name}</span>
+                </p>
+                <p>
+                  Diameter: <span>{data.diameter}</span>
+                </p>
+                <p>
+                  Climate: <span>{data.climate}</span>
+                </p>
+                <p>
+                  Gravity: <span>{data.gravity}</span>
+                </p>
+                <p>
+                  Terrain: <span>{data.terrain}</span>
+                </p>
+                <p>
+                  Surface water: <span>{data.surface_water}</span>
+                </p>
+                <p>
+                  Rotation Period: <span>{data.rotation_period}</span>
+                </p>
+                <p>
+                  Orbital Period: <span>{data.orbital_period}</span>
+                </p>
+              </div>
+            </div>
+            <Footer />
+          </>
+        ) : (
+          <>
+            <Loading />
+          </>
+        )}
+      </>
+    );
+  }
 }
 
 export default OnePlanets;

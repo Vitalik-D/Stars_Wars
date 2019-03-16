@@ -7,6 +7,7 @@ import PaginationOnePage from "../pagination/PaginationOnePage";
 
 class OneVehicles extends React.Component {
     state = {
+        pathName: "vehicles",
         data: [],
         isLoaded: false
     };
@@ -16,7 +17,8 @@ class OneVehicles extends React.Component {
     }
 
     loadPeople = async () => {
-        const data = await dataApi.getById();
+        const { pathName } = this.state;
+        const data = await dataApi.getById({ pathName });
         this.setState({
             data,
             isLoaded: true
@@ -32,29 +34,38 @@ class OneVehicles extends React.Component {
                 {isLoaded ? (
                     <>
                         <Header />
-                        <PaginationOnePage page="Vehicles" name={data.title} />
+                        <PaginationOnePage name={data.name} />
                         <div className="onePage">
                             <div className="onePage_logo">
-                                <img src={`../img/films/${index}.jpg`} alt="{data.title}" />
+                                <img src={`../img/vehicles/${index}.jpg`} alt={data.name} />
                             </div>
                             <div className="onePage_text">
                                 <p>
-                                    Name: <span>{data.title}</span>
+                                    Name: <span>{data.name}</span>
                                 </p>
                                 <p>
-                                    Episode: <span>{data.episode_id}</span>
+                                    Model: <span>{data.model}</span>
                                 </p>
                                 <p>
-                                    Opening crawl: <span>{data.opening_crawl}</span>
+                                    Manufacturer: <span>{data.manufacturer}</span>
                                 </p>
                                 <p>
-                                    Director: <span>{data.director}</span>
+                                    Cost in credits: <span>{data.cost_in_credits}</span>
                                 </p>
                                 <p>
-                                    Producer: <span>{data.producer}</span>
+                                    Length: <span>{data.length}</span>
                                 </p>
                                 <p>
-                                    Release date: <span>{data.release_date}</span>
+                                    Crew water: <span>{data.crew}</span>
+                                </p>
+                                <p>
+                                    Passengers : <span>{data.passengers}</span>
+                                </p>
+                                <p>
+                                    Cargo Capacity: <span>{data.cargo_capacity}</span>
+                                </p>
+                                <p>
+                                    Consumables: <span>{data.consumables}</span>
                                 </p>
                             </div>
                         </div>
@@ -69,5 +80,4 @@ class OneVehicles extends React.Component {
         );
     }
 }
-
 export default OneVehicles;

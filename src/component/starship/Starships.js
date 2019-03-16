@@ -5,6 +5,7 @@ import Loading from "../loading/Loading";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Pagination from "../pagination/Pagination";
+import {Link} from "react-router-dom";
 
 
 
@@ -64,7 +65,9 @@ class Starship extends React.Component {
                         <div className="dataList">
                             {starships.map(starship => (
                                 <div key={starship.name} className="starships">
-                                    <img src={`./img/starships/${starship.url.match(/\d+/)}.jpg`} alt={starship.name} />
+                                    <Link to={`/starships/${starship.url.match(/\d+/)}`}>
+                                        <img src={`./img/starships/${starship.url.match(/\d+/)}.jpg`} alt={starship.name} />
+                                    </Link>
                                     <p>Name: {starship.name}</p>
                                     <p>Model: {starship.model}</p>
                                     <p>Manufacturer: {starship.manufacturer}</p>

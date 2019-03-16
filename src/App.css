@@ -51,6 +51,7 @@ body,
 }
 .pagination p:last-child{
     padding-left: 5px;
+    text-transform: capitalize;
 
 }
 .pagination a{
@@ -334,11 +335,20 @@ body,
     font-weight: 100;
 }
 .onePage_logo img{
-    max-height: 350px;
+    height: 350px;
+    max-width: 400px;
 
 }
-
+@media (max-width: 900px) {
+    .dataList {
+        justify-content: space-around;
+    }
+}
 @media (max-width: 550px) {
+    .loading img{
+        height: 200px;
+        max-width: 200px;
+    }
     .pagination{
         font-size: 16px;
     }
