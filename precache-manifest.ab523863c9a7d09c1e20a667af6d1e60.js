@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/films.03a9a1af.jpg"
   },
   {
-    "revision": "fc76d043fe81c6f45d58",
+    "revision": "2c916bc1ea1ad07555b8",
     "url": "/Stars_Wars/static/css/main.76d6d321.chunk.css"
   },
   {
@@ -16,20 +16,20 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/js/2.62959b3d.chunk.js"
   },
   {
-    "revision": "7cf2733910d4c9ccc09fcfc79d2cbc96",
-    "url": "/Stars_Wars/static/media/Biko_Regular.7cf27339.otf"
-  },
-  {
     "revision": "cc3019aa6439ef893839b8a0d6d0391d",
     "url": "/Stars_Wars/static/media/Starjedi.cc3019aa.ttf"
+  },
+  {
+    "revision": "7cf2733910d4c9ccc09fcfc79d2cbc96",
+    "url": "/Stars_Wars/static/media/Biko_Regular.7cf27339.otf"
   },
   {
     "revision": "33022f18c26cdb9bed57635e02b8ad8e",
     "url": "/Stars_Wars/static/media/character.33022f18.jpg"
   },
   {
-    "revision": "fc76d043fe81c6f45d58",
-    "url": "/Stars_Wars/static/js/main.6d3a5a1a.chunk.js"
+    "revision": "2c916bc1ea1ad07555b8",
+    "url": "/Stars_Wars/static/js/main.da1712ef.chunk.js"
   },
   {
     "revision": "d28c9986cefbc3d4fc40b574ce17fcc6",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/Lazer Sword.cacad29a.png"
   },
   {
-    "revision": "b2a0c3a4f5246a32ae3a92359cba4f63",
+    "revision": "7b324f5ead98920d433a3fe0da0a1d89",
     "url": "/Stars_Wars/index.html"
   }
 ];
