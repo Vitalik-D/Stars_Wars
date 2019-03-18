@@ -9,6 +9,7 @@ class PaginationOnePage extends React.Component {
         const VRegExp = new RegExp(/\/\d+/g);
         const index = urlParams.replace(VRegExp, '');
         const pathName = index.replace(/\//g, '');
+        const url_url = pathName.replace('Stars_Wars/', '')
         return (
             <div className="pagination">
                 <Link to="/">
@@ -16,7 +17,7 @@ class PaginationOnePage extends React.Component {
                 </Link>
                 <span>/</span>
                 <Link to={index}>
-                    <p>{pathName}</p>
+                    <p>{url_url}</p>
                 </Link>
                 <span>/</span>
                 <p>{this.props.name}</p>
