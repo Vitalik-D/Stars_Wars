@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/films.03a9a1af.jpg"
   },
   {
-    "revision": "5ee80b5bab8b0ffd9848",
-    "url": "/Stars_Wars/static/css/main.76d6d321.chunk.css"
+    "revision": "f63445fcea4260072e96",
+    "url": "/Stars_Wars/static/css/main.b872584f.chunk.css"
   },
   {
     "revision": "e79e7e17f7824d267b17",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/character.33022f18.jpg"
   },
   {
-    "revision": "5ee80b5bab8b0ffd9848",
+    "revision": "f63445fcea4260072e96",
     "url": "/Stars_Wars/static/js/main.6d4d208d.chunk.js"
   },
   {
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/Stars_Wars/static/media/Lazer Sword.cacad29a.png"
   },
   {
-    "revision": "43ce51fa80969e8083c8277e56ae8285",
+    "revision": "d1cb5e6a7e28bbe5a6b8dd906a6a7061",
     "url": "/Stars_Wars/index.html"
   }
 ];
