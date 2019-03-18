@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import * as dataApi from "../../api/Api";
-import Loading from "../loading/Loading";
-import PaginationOnePage from "../pagination/PaginationOnePage";
+import Header from "../../other/header/Header";
+import Footer from "../../other/footer/Footer";
+import * as dataApi from "../../../api/Api";
+import Loading from "../../other/loading/Loading";
+import PaginationOnePage from "../../other/pagination/PaginationOnePage";
 
-class OneSpecies extends React.Component {
+class OnePeople extends React.Component {
     state = {
-        pathName: "species",
+        pathName: "people",
         data: [],
         isLoaded: false
     };
@@ -34,26 +34,26 @@ class OneSpecies extends React.Component {
                 {isLoaded ? (
                     <>
                         <Header />
-                        <PaginationOnePage name={data.name} />
+                        <PaginationOnePage  name={data.name} />
                         <div className="onePage">
                             <div className="onePage_logo">
-                                <img src={`../img/species/${index}.jpg`} alt={data.name} />
+                                <img src={`../img/people/${index}.jpg`} alt={data.name} />
                             </div>
                             <div className="onePage_text">
                                 <p>
                                     Name: <span>{data.name}</span>
                                 </p>
                                 <p>
-                                    Classification: <span>{data.classification}</span>
+                                    Height: <span>{data.height}</span>
                                 </p>
                                 <p>
-                                    Designation: <span>{data.designation}</span>
+                                    Mass: <span>{data.mass}</span>
                                 </p>
                                 <p>
-                                    Average height: <span>{data.average_height}</span>
+                                    Birth Year: <span>{data.birth_year}</span>
                                 </p>
                                 <p>
-                                    Language: <span>{data.language}</span>
+                                    Gender: <span>{data.gender}</span>
                                 </p>
                             </div>
                         </div>
@@ -69,4 +69,4 @@ class OneSpecies extends React.Component {
     }
 }
 
-export default OneSpecies;
+export default OnePeople;

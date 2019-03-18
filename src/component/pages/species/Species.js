@@ -1,10 +1,10 @@
 import React from "react";
-import * as dataApi from "../../api/Api";
-import ApiPagination from "../pagination/ApiPagination";
-import Loading from "../loading/Loading";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import Pagination from "../pagination/Pagination";
+import * as dataApi from "../../../api/Api";
+import ApiPagination from "../../other/pagination/ApiPagination";
+import Loading from "../../other/loading/Loading";
+import Header from "../../other/header/Header";
+import Footer from "../../other/footer/Footer";
+import Pagination from "../../other/pagination/Pagination";
 import {Link} from "react-router-dom";
 
 

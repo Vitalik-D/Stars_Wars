@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header/Header";
 
-import sword from "../../img/Lazer Sword.png"
+import sword from "../../../img/Lazer Sword.png"
 
 class Loading extends React.Component {
   render() {

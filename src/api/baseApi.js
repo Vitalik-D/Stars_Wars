@@ -7,6 +7,7 @@ export const get =  (url = {}) => {
 };
 
 export const getId =  (url = {}) => {
-    return fetch(ID_API_URL + url)
+    const url_url = url.replace('Stars_Wars/', '')
+    return fetch(ID_API_URL + url_url)
         .then(url => url.json())
 };

@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 
-import Header from "./component/header/Header";
-import CardCategory from "./component/card/CardCategory";
-import Footer from "./component/footer/Footer";
+import Header from "./component/other/header/Header";
+import CardCategory from "./component/other/card/CardCategory";
+import Footer from "./component/other/footer/Footer";
 
 import character from './img/home/character.jpg'
 import films from './img/home/films.jpg'

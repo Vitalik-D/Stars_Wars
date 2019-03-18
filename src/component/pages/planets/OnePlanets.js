@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import * as dataApi from "../../api/Api";
-import Loading from "../loading/Loading";
-import PaginationOnePage from "../pagination/PaginationOnePage";
+import Header from "../../other/header/Header";
+import Footer from "../../other/footer/Footer";
+import * as dataApi from "../../../api/Api";
+import Loading from "../../other/loading/Loading";
+import PaginationOnePage from "../../other/pagination/PaginationOnePage";
 
-class OneFilms extends React.Component {
+class OnePlanets extends React.Component {
   state = {
-    pathName: "films",
+    pathName: "planets",
     data: [],
     isLoaded: false
   };
@@ -34,29 +34,35 @@ class OneFilms extends React.Component {
         {isLoaded ? (
           <>
             <Header />
-            <PaginationOnePage  name={data.title} />
+            <PaginationOnePage name={data.name} />
             <div className="onePage">
               <div className="onePage_logo">
-                <img src={`../img/films/${index}.jpg`} alt={data.title} />
+                <img src={`../img/planets/${index}.jpg`} alt={data.name} />
               </div>
               <div className="onePage_text">
                 <p>
-                  Name: <span>{data.title}</span>
+                  Name: <span>{data.name}</span>
                 </p>
                 <p>
-                  Episode: <span>{data.episode_id}</span>
+                  Diameter: <span>{data.diameter}</span>
                 </p>
                 <p>
-                  Opening crawl: <span>{data.opening_crawl}</span>
+                  Climate: <span>{data.climate}</span>
                 </p>
                 <p>
-                  Director: <span>{data.director}</span>
+                  Gravity: <span>{data.gravity}</span>
                 </p>
                 <p>
-                  Producer: <span>{data.producer}</span>
+                  Terrain: <span>{data.terrain}</span>
                 </p>
                 <p>
-                  Release date: <span>{data.release_date}</span>
+                  Surface water: <span>{data.surface_water}</span>
+                </p>
+                <p>
+                  Rotation Period: <span>{data.rotation_period}</span>
+                </p>
+                <p>
+                  Orbital Period: <span>{data.orbital_period}</span>
                 </p>
               </div>
             </div>
@@ -72,4 +78,4 @@ class OneFilms extends React.Component {
   }
 }
 
-export default OneFilms;
+export default OnePlanets;

@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
+import Header from "../../other/header/Header";
+import Footer from "../../other/footer/Footer";
 
-import * as dataApi from "../../api/Api";
+import * as dataApi from "../../../api/Api";
 
-import Loading from "../loading/Loading";
-import Pagination from "../pagination/Pagination";
+import Loading from "../../other/loading/Loading";
+import Pagination from "../../other/pagination/Pagination";
 import { Link } from "react-router-dom";
 
 

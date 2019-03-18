@@ -3,21 +3,21 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Films from "./component/film/Films";
-import Planets from "./component/planets/Planets";
-import People from "./component/people/People";
-import Species from "./component/species/Species";
-import Vehicles from "./component/Vehicles/Vehicles";
-import Starships from "./component/starship/Starships";
-import PageNotFound from "./component/pageNotFound/PageNotFound";
+import Films from "./component/pages/film/Films";
+import Planets from "./component/pages/planets/Planets";
+import People from "./component/pages/people/People";
+import Species from "./component/pages/species/Species";
+import Vehicles from "./component/pages/Vehicles/Vehicles";
+import Starships from "./component/pages/starship/Starships";
+import PageNotFound from "./component/other/pageNotFound/PageNotFound";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import OneFilms from "./component/film/OneFilm";
-import OnePeople from "./component/people/OnePeople";
-import OneSpecies from "./component/species/OneSpecies";
-import OneVehicles from "./component/Vehicles/OneVehicles";
-import OneStarships from "./component/starship/OneStarships";
-import OnePlanets from "./component/planets/OnePlanets";
-import { BrowserRouter } from 'react-router-dom';
+import OneFilms from "./component/pages/film/OneFilm";
+import OnePeople from "./component/pages/people/OnePeople";
+import OneSpecies from "./component/pages/species/OneSpecies";
+import OneVehicles from "./component/pages/Vehicles/OneVehicles";
+import OneStarships from "./component/pages/starship/OneStarships";
+import OnePlanets from "./component/pages/planets/OnePlanets";
+import { HashRouter } from 'react-router-dom';
 
 const Root = () => (
 
@@ -42,9 +42,9 @@ const Root = () => (
 );
 
 ReactDOM.render(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
     <Root />
-    </BrowserRouter>,
+    </HashRouter>,
     document.getElementById('root'
     ));
 

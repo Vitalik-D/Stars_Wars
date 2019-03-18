@@ -1,13 +1,13 @@
 import React from "react";
 
-import * as dataApi from "../../api/Api";
-import ApiPagination from "../pagination/ApiPagination";
-import Loading from "../loading/Loading";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
+import * as dataApi from "../../../api/Api";
+import ApiPagination from "../../other/pagination/ApiPagination";
+import Loading from "../../other/loading/Loading";
+import Header from "../../other/header/Header";
+import Footer from "../../other/footer/Footer";
 import { Link } from "react-router-dom";
 
-import Pagination from "../pagination/Pagination";
+import Pagination from "../../other/pagination/Pagination";
 
 class People extends React.Component {
   state = {
