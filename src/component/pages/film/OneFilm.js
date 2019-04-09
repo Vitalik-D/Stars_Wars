@@ -4,6 +4,7 @@ import Footer from "../../other/footer/Footer";
 import * as dataApi from "../../../api/Api";
 import Loading from "../../other/loading/Loading";
 import PaginationOnePage from "../../other/pagination/PaginationOnePage";
+import AddFilms from "../additional_components/films";
 
 class OneFilms extends React.Component {
   state = {
@@ -59,7 +60,9 @@ class OneFilms extends React.Component {
                   Release date: <span>{data.release_date}</span>
                 </p>
               </div>
+
             </div>
+            <AddFilms/>
             <Footer />
           </>
         ) : (

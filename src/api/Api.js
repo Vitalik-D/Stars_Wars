@@ -9,7 +9,11 @@ export const getAll = async ({pathName, page}) => {
 
 export const getById = async ({pathName}) => {
     const urlParams = window.location.pathname;
-    // const urlId = urlParams.replace(`/${pathName}/`,'');
     return getId(`${urlParams}/`)
 };
 
+// export const getAddData = async ({pathName}) => {
+//     const urlParams = window.location.pathname;
+//     // const urlId = urlParams.replace(`/${pathName}/`,'');
+//     return getId(`${pathName}/`)
+// };
