@@ -83,16 +83,22 @@ class Page extends React.Component {
   }
 }
 
-const Block = ({data,pathName}) => {
-
+const Block = ({ data, pathName }) => {
   switch (pathName) {
-    case 'starships': return <Starship data={data} />;
-    case 'people': return <People data={data} />;
-    case 'films': return <Films data={data} />;
-    case 'planets': return <Planets data={data} />;
-    case 'vehicles': return <Vehicles data={data} />;
-    case 'species': return <Species data={data} />;
-    default: return <PageNotFound/>
+    case "starships":
+      return <Starship data={data} />;
+    case "people":
+      return <People data={data} />;
+    case "films":
+      return <Films data={data} />;
+    case "planets":
+      return <Planets data={data} />;
+    case "vehicles":
+      return <Vehicles data={data} />;
+    case "species":
+      return <Species data={data} />;
+    default:
+      return <PageNotFound />;
   }
 };
 

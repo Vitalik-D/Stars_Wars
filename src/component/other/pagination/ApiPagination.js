@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
 class ApiPagination extends React.Component {
   constructor(props) {
     super(props);
@@ -19,32 +18,32 @@ class ApiPagination extends React.Component {
     for (let i = 0; i < pagesCount; i++) {
       pages.push(i + 1);
     }
-    if(pagesCount <=1){
+    if (pagesCount <= 1) {
       this.setState({
         pages: [],
         isLoading: true
       });
-    }else{ this.setState({
-      pages,
-      isLoading: true
-    })}
-
+    } else {
+      this.setState({
+        pages,
+        isLoading: true
+      });
+    }
   }
 
   render() {
-    const { pages, isLoading} = this.state;
-    const { pathname} = this.props.props.location;
+    const { pages, isLoading } = this.state;
+    const { pathname } = this.props.props.location;
     return (
       <div className="apiPagination">
-        {
-          !isLoading ? (
+        {!isLoading ? (
           <></>
         ) : (
           pages.map(page => (
             <NavLink
-              isActive={(location) => {
-                if(`?page=${page}` === location.search){
-                  return true
+              isActive={location => {
+                if (`?page=${page}` === location.search) {
+                  return true;
                 }
               }}
               // activeStyle={{
@@ -60,8 +59,7 @@ class ApiPagination extends React.Component {
               {page}
             </NavLink>
           ))
-        )
-        }
+        )}
       </div>
     );
   }

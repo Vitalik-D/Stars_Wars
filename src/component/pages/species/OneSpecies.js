@@ -1,8 +1,8 @@
 import React from "react";
 
 function OneSpecies(data) {
-    const index = data.id;
-    data = data.data;
+  const index = data.id;
+  data = data.data;
   return (
     <>
       <div className="onePage">

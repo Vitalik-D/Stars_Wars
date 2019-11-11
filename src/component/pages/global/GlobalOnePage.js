@@ -29,7 +29,7 @@ class PageOne extends React.Component {
     const pathName = this.props.location.pathname;
     const data = await dataApi.getById({ pathName });
     let nameBlock = pathName.replace(/\W|\d/g, "");
-     const id = pathName.replace(/\D/g, '')
+    const id = pathName.replace(/\D/g, "");
     this.setState({
       data,
       isLoaded: true,
@@ -46,7 +46,12 @@ class PageOne extends React.Component {
           <>
             <Header title={pathName} />
             <Pagination page={pathName} id={pagination} />
-            <Block data={data} pathName={pathName} id={pagination} props={this.props} />
+            <Block
+              data={data}
+              pathName={pathName}
+              id={pagination}
+              props={this.props}
+            />
           </>
         ) : (
           <>
@@ -59,7 +64,7 @@ class PageOne extends React.Component {
 }
 
 const Block = ({ data, pathName, id }) => {
-    switch (pathName) {
+  switch (pathName) {
     case "starships":
       return <OneStarships data={data} id={id} />;
     case "people":

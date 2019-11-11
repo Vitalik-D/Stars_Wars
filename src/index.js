@@ -4,7 +4,12 @@ import "./App.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import PageNotFound from "./component/pages/pageNotFound/PageNotFound";
-import { BrowserRouter,BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import Page from "./component/pages/global/GlobalPage";
 import Footer from "./component/other/footer/Footer";
 import PageOne from "./component/pages/global/GlobalOnePage";
@@ -30,13 +35,13 @@ const Root = () => (
         <Route render={PageNotFound} />
       </Switch>
     </Router>
-      <Footer />
+    <Footer />
   </>
 );
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Root />
+    <Root />
   </BrowserRouter>,
   document.getElementById("root")
 );
