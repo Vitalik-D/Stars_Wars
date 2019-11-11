@@ -1,15 +1,12 @@
-import {get, getId} from './baseApi'
+import {get} from './baseApi'
 
 export const getAll = async ({pathName, page}) => {
-    const urlParams = new URLSearchParams();
-
-    urlParams.set('page', page);
-    return get(`${pathName}?${urlParams.toString()}`)
+    return get(`${pathName}?page=${page}`)
 };
 
 export const getById = async ({pathName}) => {
     const urlParams = window.location.pathname;
-    return getId(`${urlParams}/`)
+    return get(`${urlParams}/`)
 };
 
 // export const getAddData = async ({pathName}) => {

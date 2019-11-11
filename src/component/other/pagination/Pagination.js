@@ -1,19 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+function Pagination(props) {
+    let id = props.id;
 
-class Pagination extends React.Component {
-
-    render() {
+    if(!id) {
         return (
             <div className="pagination">
                 <Link to="/">
                     <p>Home</p>
                 </Link>
                 <span>/</span>
-                <p>{this.props.page}</p>
+                <p>{props.page}</p>
             </div>
         );
+    } else{
+    return(
+        <div className="pagination">
+            <Link to="/">
+                <p>Home</p>
+            </Link>
+            <span>/</span>
+            <Link to={`/${props.page}`}>
+                <p>{props.page}</p>
+            </Link>
+            <span>/</span>
+            <p>{id}</p>
+        </div>
+        )
     }
 }
 

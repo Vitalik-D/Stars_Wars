@@ -1,44 +1,70 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-import { Link, withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
 
-const ApiPagination = ({ location, count, page = 1, perPage = 10 }) => {
-  const pagesCount = Math.ceil(count / perPage);
-  const pages = [];
-
-  for (let i = 0; i < pagesCount; i++) {
-    pages.push(i + 1);
+class ApiPagination extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      perPage: 10,
+      count: this.props.count,
+      isLoading: false
+    };
   }
 
-  const getSearchWithPage = page => {
-    const urlParams = new URLSearchParams(location.search);
+  componentDidMount() {
+    const { count, perPage } = this.state;
+    const pagesCount = Math.ceil(count / perPage);
+    const pages = [];
+    for (let i = 0; i < pagesCount; i++) {
+      pages.push(i + 1);
+    }
+    if(pagesCount <=1){
+      this.setState({
+        pages: [],
+        isLoading: true
+      });
+    }else{ this.setState({
+      pages,
+      isLoading: true
+    })}
 
-    urlParams.set("page", page);
+  }
 
-    return urlParams.toString();
-  };
+  render() {
+    const { pages, isLoading} = this.state;
+    const { pathname} = this.props.props.location;
+    return (
+      <div className="apiPagination">
+        {
+          !isLoading ? (
+          <></>
+        ) : (
+          pages.map(page => (
+            <NavLink
+              isActive={(location) => {
+                if(`?page=${page}` === location.search){
+                  return true
+                }
+              }}
+              // activeStyle={{
+              //   color: "#fff"
+              // }}
+              activeClassName="selected"
+              key={page}
+              to={{
+                pathname: pathname,
+                search: `page=${page}`
+              }}
+            >
+              {page}
+            </NavLink>
+          ))
+        )
+        }
+      </div>
+    );
+  }
+}
 
-  return (
-    <div className="apiPagination">
-      {pages.map(page => (
-        <Link
-          key={page}
-          to={{
-            pathname: location.pathname,
-            search: getSearchWithPage(page)
-          }}
-        >
-          {page}
-        </Link>
-      ))}
-    </div>
-  );
-};
-ApiPagination.propTypes = {
-  count: PropTypes.number.isRequired,
-  page: PropTypes.number,
-  perPage: PropTypes.number
-};
-
-export default withRouter(ApiPagination);
+export default ApiPagination;

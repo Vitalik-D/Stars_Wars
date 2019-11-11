@@ -1,18 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-class Header extends React.Component {
-  render() {
+export default function Header(props) {
     return (
-      <div className="header">
-        <div className="logo">
-          <p>Star Wars</p>
+        <div className="header">
+            <div className="logo">
+                <Link to='/'><p>Star Wars</p></Link>
+            </div>
+            <div>
+                <p>{props.title}</p>
+            </div>
         </div>
-          <div>
-              <p>{this.props.category}</p>
-          </div>
-      </div>
     );
-  }
 }
-
-export default Header;

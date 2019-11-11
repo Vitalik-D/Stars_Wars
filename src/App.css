@@ -21,7 +21,9 @@ body,
     justify-content: center;
 }
 /*header*/
-.logo{
+.logo a p{
+    cursor: pointer;
+    text-decoration: none;
     display: flex;
     color: #FFEE58;
     font-size: 50px;
@@ -29,7 +31,10 @@ body,
     align-items: center;
     text-transform: uppercase;
     font-family: Starjedi;
+}.logo a{
+    text-decoration: none;
 }
+
 .header div:last-child{
     display: flex;
     color: #fff;
