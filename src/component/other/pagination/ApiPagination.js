@@ -31,6 +31,14 @@ class ApiPagination extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState){
+    if(nextProps.props.location.search === this.props.props.location.search ){
+      return true
+    }else {
+      return false
+    }
+  }
+
   render() {
     const { pages, isLoading } = this.state;
     const { pathname } = this.props.props.location;
@@ -41,15 +49,11 @@ class ApiPagination extends React.Component {
         ) : (
           pages.map(page => (
             <NavLink
-              isActive={location => {
-                if (`?page=${page}` === location.search) {
-                  return true;
-                }
-              }}
-              // activeStyle={{
-              //   color: "#fff"
-              // }}
-              activeClassName="selected"
+                isActive={(match, location) => {
+                  if(location.search===`?page=${page}`){
+                    return true
+                  }
+                }}
               key={page}
               to={{
                 pathname: pathname,

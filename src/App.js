@@ -15,22 +15,22 @@ function App() {
     <>
       <Header title="A VISUAL GUIDE" />
       <div className="app">
-        <Link to="/people">
+        <Link to="/people?page=1">
           <CardCategory name="Character" src={character} />
         </Link>
-        <Link to="/films">
+        <Link to="/films?page=1">
           <CardCategory name="Films" src={films} />
         </Link>
-        <Link to="/species">
+        <Link to="/species?page=1">
           <CardCategory name="Species" src={species} />
         </Link>
-        <Link to="/starships">
+        <Link to="/starships?page=1">
           <CardCategory name="Starships" src={starships} />
         </Link>
-        <Link to="/vehicles">
+        <Link to="/vehicles?page=1">
           <CardCategory name="Vehicles" src={vehicles} />
         </Link>
-        <Link to="/planets">
+        <Link to="/planets?page=1">
           <CardCategory name="Planets" src={planets} />
         </Link>
       </div>

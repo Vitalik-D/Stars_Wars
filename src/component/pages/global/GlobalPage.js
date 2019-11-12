@@ -42,7 +42,7 @@ class Page extends React.Component {
     const page = +urlParams.get("page") || 1;
 
     const pathName = this.props.location.pathname;
-    const { count, results: data, next } = await dataApi.getAll({
+    const { count, results: data} = await dataApi.getAll({
       pathName,
       page
     });
@@ -50,7 +50,6 @@ class Page extends React.Component {
     this.setState({
       page,
       data,
-      next,
       count,
       isLoaded: true,
       pathName
@@ -60,7 +59,6 @@ class Page extends React.Component {
   render() {
     const { data, isLoaded, pathName, count } = this.state;
     const nameBlock = pathName.replace("/", "");
-
     return (
       <>
         {isLoaded ? (
@@ -68,7 +66,7 @@ class Page extends React.Component {
             <Header title={nameBlock} />
             <div className="nav">
               <Pagination page={nameBlock} />
-              <ApiPagination count={count} props={this.props} />
+              <ApiPagination count={count} props={this.props} isLoading={false} handler = {this.handler} />
             </div>
 
             <Block data={data} pathName={nameBlock} props={this.props} />

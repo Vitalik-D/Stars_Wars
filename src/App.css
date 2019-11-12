@@ -330,6 +330,9 @@ body,
     font-family: Biko;
     max-height: 350px;
 }
+.apiPagination .active{
+    color: white;
+}
 .onePage_text p {
     padding-top: 18px;
     padding-right: 40px;
